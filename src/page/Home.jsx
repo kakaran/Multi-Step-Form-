@@ -3,14 +3,15 @@ import PersonalInfo from "../components/PersonalInfo";
 import SelectPlan from "../components/SelectPlan";
 import PickAddOns from "../components/PickAddOns";
 import FinishingUp from "../components/FinishingUp";
-import { useEffect } from "react";
+import Thank from "../components/Thank";
 
 const Home = () => {
   const [page, setpage] = useState({
     home: false,
     selectPlans: false,
-    pickAddOns: true,
+    pickAddOns: false,
     finishingUp: false,
+    thank : true
   });
 
   const [formValue, setFormValue] = useState({
@@ -18,7 +19,7 @@ const Home = () => {
     email: "",
     phone: "",
     plan: "",
-    add: "",
+    add: [],
   });
 
 //   useEffect(() => {
@@ -53,6 +54,9 @@ const Home = () => {
       )}
       {page.finishingUp && (
         <FinishingUp change={Onchagetesdetail} value={formValue} />
+      )}
+      {page.thank && (
+        <Thank change={Onchagetesdetail} value={formValue} />
       )}
     </>
   );
