@@ -24,6 +24,7 @@ const inputTagValues = [
 ];
 
 const PersonalInfo = ({ change, value }) => {
+  
   const {
     register,
     handleSubmit,

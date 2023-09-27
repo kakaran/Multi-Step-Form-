@@ -4,14 +4,15 @@ import SelectPlan from "../components/SelectPlan";
 import PickAddOns from "../components/PickAddOns";
 import FinishingUp from "../components/FinishingUp";
 import Thank from "../components/Thank";
+import { useEffect } from "react";
 
 const Home = () => {
   const [page, setpage] = useState({
-    home: false,
+    home: true,
     selectPlans: false,
     pickAddOns: false,
     finishingUp: false,
-    thank : true
+    thank : false
   });
 
   const [formValue, setFormValue] = useState({
@@ -22,14 +23,15 @@ const Home = () => {
     add: [],
   });
 
-//   useEffect(() => {
-//     setpage({
-//       home: true,
-//       selectPlans: false,
-//       pickAddOns: false,
-//       finishingUp: false,
-//     });
-//   }, []);
+  useEffect(() => {
+    setpage({
+      home: true,
+      selectPlans: false,
+      pickAddOns: false,
+      finishingUp: false,
+      thank : false
+    });
+  }, []);
 
   const Onchagetesdetail = (last, next, value) => {
     setpage({ ...page, [last]: false, [next]: true });
