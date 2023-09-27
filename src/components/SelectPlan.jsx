@@ -22,15 +22,37 @@ const plansData = [
 ];
 
 const SelectPlan = ({ change, value }) => {
-  const [selectPlan, setSelectPlan] = useState();
-  const [planChange, setPlanChange] = useState(false);
-  console.log(value);
+  const [selectPlan, setSelectPlan] = useState({
+    pack: value.plan?.pack,
+    planSelect: false,
+    price: value.plan?.price,
+  });
+  const [planChange, setPlanChange] = useState(
+    value.plan?.planSelect ? value.plan.planSelect : false
+  );
+
+  //Data reset on change the plan year
+  const planchangeMethod = () => {
+    setSelectPlan({
+      pack: "",
+      planSelect: planChange,
+      price: "",
+    });
+  };
+
+  //Data Set on State
+  const selectPlanUpdate = (data) => {
+    setSelectPlan((emptyobject) => ({ ...emptyobject }, { ...data }));
+  };
+
+  //Move on next page
   const nextPage = () => {
-    if (selectPlan) {
+    if (selectPlan.pack) {
       change("selectPlans", "pickAddOns", { plan: selectPlan });
     }
   };
 
+  //Move on previous page
   const backPage = () => {
     change("selectPlans", "home", { plan: selectPlan });
   };
@@ -53,8 +75,9 @@ const SelectPlan = ({ change, value }) => {
                 }`}
                 key={data?.pack}
                 onClick={() =>
-                  setSelectPlan({
+                  selectPlanUpdate({
                     pack: data?.pack,
+                    planSelect: planChange,
                     price: !planChange ? data.monthPrice : data.yearPrice,
                   })
                 }
@@ -87,7 +110,11 @@ const SelectPlan = ({ change, value }) => {
               <input
                 type="checkbox"
                 id="checkbox"
-                onClick={() => setPlanChange(!planChange)}
+                onChange={() => {
+                  setPlanChange(!planChange);
+                  planchangeMethod();
+                }}
+                checked={planChange}
               />
               <div className="slider round"></div>
             </label>

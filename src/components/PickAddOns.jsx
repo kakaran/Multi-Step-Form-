@@ -1,17 +1,22 @@
+import { useState } from "react";
+
 const allServices = [
   {
+    id: 1,
     serviceName: "Online service",
     serviceDetail: "Access to multiplayer games",
     serviceMonthPrice: "1/mo",
     serviceYearPrice: "10/yr",
   },
   {
+    id: 2,
     serviceName: "Larger storage",
     serviceDetail: "Extra 1TB of cloud save",
     serviceMonthPrice: "2/mo",
     serviceYearPrice: "20/yr",
   },
   {
+    id: 3,
     serviceName: "Customizable profile",
     serviceDetail: "Custom theme on your profile",
     serviceMonthPrice: "2/mo",
@@ -19,8 +24,32 @@ const allServices = [
   },
 ];
 
-const PickAddOns = ({ change }) => {
-  
+const PickAddOns = ({ change, value }) => {
+
+  const [planChange] = useState(
+    value.plan?.planSelect ? value.plan.planSelect : false
+  );
+
+  const [addOns, setAddOns] = useState([]);
+
+  const AddOnsMethod = (data) => {
+    setAddOns((addOns) => {
+      if (!addOns.length) {
+        return [...addOns, data];
+      } else {
+        const result = addOns.map((value) => {
+          console.log(value.id === data.id);
+          value.id === data.id
+            ? addOns.filter((check) => check.id !== data.id)
+            : [...addOns,data];
+        });
+        console.log(result, "result");
+        return result;
+      }
+    });
+  };
+
+  console.log(addOns);
   const nextPage = () => {
     // if (selectPlan) {
     change("pickAddOns", "finishingUp");
@@ -28,7 +57,7 @@ const PickAddOns = ({ change }) => {
   };
 
   const backPage = () => {
-    change("pickAddOns", "selectPlans");
+    change("finishingUp", "pickAddOns");
   };
 
   return (
@@ -42,13 +71,30 @@ const PickAddOns = ({ change }) => {
           {allServices.map((value, index) => (
             <div className="service-container" key={index}>
               <div>
-                <input type="checkbox" name="" id="" />
+                <input
+                  type="checkbox"
+                  name=""
+                  id={value.id}
+                  onClick={() =>
+                    AddOnsMethod({
+                      id: value.id,
+                      pack: value?.serviceName,
+                      planSelect: planChange,
+                      price: !planChange
+                        ? value.serviceMonthPrice
+                        : value.serviceYearPrice,
+                    })
+                  }
+                />
                 <span>
-                  <label htmlFor="">{value.serviceName}</label>
+                  <label htmlFor={value.id}>{value.serviceName}</label>
                   <p>{value.serviceDetail}</p>
                 </span>
               </div>
-              <p>+${value.serviceMonthPrice}</p>
+              <p>
+                +$
+                {!planChange ? value.serviceMonthPrice : value.serviceYearPrice}
+              </p>
             </div>
           ))}
         </div>
@@ -60,6 +106,5 @@ const PickAddOns = ({ change }) => {
     </div>
   );
 };
-
 
 export default PickAddOns;

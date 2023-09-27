@@ -7,9 +7,9 @@ import { useEffect } from "react";
 
 const Home = () => {
   const [page, setpage] = useState({
-    home: true,
+    home: false,
     selectPlans: false,
-    pickAddOns: false,
+    pickAddOns: true,
     finishingUp: false,
   });
 
@@ -21,14 +21,14 @@ const Home = () => {
     add: "",
   });
 
-  useEffect(() => {
-    setpage({
-      home: true,
-      selectPlans: false,
-      pickAddOns: false,
-      finishingUp: false,
-    });
-  }, []);
+//   useEffect(() => {
+//     setpage({
+//       home: true,
+//       selectPlans: false,
+//       pickAddOns: false,
+//       finishingUp: false,
+//     });
+//   }, []);
 
   const Onchagetesdetail = (last, next, value) => {
     setpage({ ...page, [last]: false, [next]: true });
