@@ -1,16 +1,21 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const FinishingUp = ({ change, value }) => {
+
   const [total, setTotal] = useState();
+
   const nextPage = () => {
     // if (selectPlan) {
-    // change("", "");
+    change("finishingUp", "thank");
     // }
   };
 
   const backPage = () => {
     change("finishingUp", "pickAddOns");
+  };
+
+  const ChageButton = () => {
+    change("finishingUp", "selectPlans");
   };
 
   const totalValue = () => {
@@ -41,7 +46,7 @@ const FinishingUp = ({ change, value }) => {
                   {value?.plan.pack}
                   {value?.plan.planSelect ? "(Year)" : "(Monthly)"}
                 </h3>
-                <p>Change</p>
+                <p onClick={ChageButton}>Change</p>
               </div>
               <p>${value?.plan.price}</p>
             </div>

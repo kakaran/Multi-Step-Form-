@@ -1,18 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PersonalInfo from "../components/PersonalInfo";
 import SelectPlan from "../components/SelectPlan";
 import PickAddOns from "../components/PickAddOns";
 import FinishingUp from "../components/FinishingUp";
 import Thank from "../components/Thank";
-import { useEffect } from "react";
 
-const Home = () => {
+const Home = ({sideMethod}) => {
   const [page, setpage] = useState({
     home: true,
     selectPlans: false,
     pickAddOns: false,
     finishingUp: false,
-    thank : false
+    thank: false
   });
 
   const [formValue, setFormValue] = useState({
@@ -29,7 +28,7 @@ const Home = () => {
       selectPlans: false,
       pickAddOns: false,
       finishingUp: false,
-      thank : false
+      thank: false
     });
   }, []);
 
@@ -39,9 +38,9 @@ const Home = () => {
       ...preState,
       ...value,
     }));
+    sideMethod(next);
   };
 
-  console.log(formValue, "Home");
 
   return (
     <>

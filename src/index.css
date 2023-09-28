@@ -8,8 +8,8 @@
   font-family: "Ubuntu", sans-serif;
 }
 
-html{
-    height: 100%;
+html {
+  height: 100%;
 }
 
 body {
@@ -35,15 +35,15 @@ body {
   padding-bottom: 0.6rem;
 }
 
-.common-container > .common-heading-div {
+.common-container>.common-heading-div {
   margin: 0rem 0rem 2rem 0rem;
 }
 
-.common-container > .common-heading-div > h1 {
+.common-container>.common-heading-div>h1 {
   color: #0e2d4b;
 }
 
-.common-container > .common-heading-div > p {
+.common-container>.common-heading-div>p {
   color: #acadb2;
   padding: 1rem 0rem;
 }
@@ -54,7 +54,7 @@ body {
   align-items: center;
 }
 
-.navigation-button > div {
+.navigation-button>div {
   cursor: pointer;
   color: #9c9ca5;
 }
@@ -63,7 +63,7 @@ body {
   color: #04234a;
 }
 
-.navigation-button > button {
+.navigation-button>button {
   padding: 1rem 1.8rem;
   border-radius: 0.4rem;
   border: none;
@@ -73,7 +73,8 @@ body {
   background-color: #174a8b;
   cursor: pointer;
 }
-.navigation-button > button:hover {
+
+.navigation-button>button:hover {
   background-color: #938cfe;
 }
 
@@ -126,7 +127,7 @@ body {
   margin-bottom: 0.8rem;
 }
 
-.side-menu-steps-container > .side-menu-index {
+.side-menu-steps-container>.side-menu-index {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -136,23 +137,23 @@ body {
   color: #d1cdff;
 }
 
-.side-menu-steps-container > .side-menu-index > span {
+.side-menu-steps-container>.side-menu-index>span {
   padding: 0.35rem 0rem;
   height: 100%;
   display: inline-block;
 }
 
-.side-menu-steps-container > .side-menu-detail {
+.side-menu-steps-container>.side-menu-detail {
   margin-left: 1.6rem;
 }
 
-.side-menu-steps-container > .side-menu-detail > p {
+.side-menu-steps-container>.side-menu-detail>p {
   font-size: small;
   padding-bottom: 0.4rem;
   color: #a3a2ff;
 }
 
-.side-menu-steps-container > .side-menu-detail > h2 {
+.side-menu-steps-container>.side-menu-detail>h2 {
   font-size: medium;
   text-transform: uppercase;
   padding-bottom: 0.4rem;
@@ -160,38 +161,38 @@ body {
 
 /* ------------ Personal-Info-Css -------------- */
 
-.common-container > form {
+.common-container>form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 
-.common-container > form > div .personal-info-form-input {
+.common-container>form>div>.personal-info-form-input {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 1.2rem;
 }
 
-.common-container > form > div > .personal-info-form-input > span {
+.common-container>form>div>.personal-info-form-input>span {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.common-container > form > div > .personal-info-form-input > span > label {
+.common-container>form>div>.personal-info-form-input>span>label {
   color: #1a2239;
   font-size: medium;
 }
 
-.common-container > form > div > .personal-info-form-input > span > p {
+.common-container>form>div>.personal-info-form-input>span>p {
   color: #bb434e;
   font-size: 0.9rem;
   font-weight: bold;
 }
 
-.common-container > form > div > .personal-info-form-input > input {
+.common-container>form>div>.personal-info-form-input>input {
   padding: 1rem;
   border-radius: 0.5rem;
   border: 1px solid #dbdade;
@@ -200,19 +201,15 @@ body {
   margin: 0rem 0.1rem;
 }
 
-.common-container
-  > form
-  > div
-  > .personal-info-form-input
-  > input::placeholder {
+.common-container>form>div>.personal-info-form-input>input::placeholder {
   color: #96979b;
 }
 
-.common-container > form > div > div > .personal-info-form-input > input:focus {
+.common-container>form>div>div>.personal-info-form-input>input:focus {
   outline: 1px solid #554f95;
 }
 
-.common-container > form > div > div:nth-child(2) {
+.common-container>form>div>div:nth-child(2) {
   width: 100%;
   text-align: end;
 }
@@ -228,18 +225,18 @@ body {
   height: 100%;
 }
 
-.select-plan-box-container > div:nth-child(1) {
+.select-plan-box-container>div:nth-child(1) {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
 }
 
-.select-plan-box-container > div {
+.select-plan-box-container>div {
   width: 100%;
 }
 
-.select-plan-box-container > div > .plan-box-container {
+.select-plan-box-container>div>.plan-box-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -262,18 +259,18 @@ body {
   border: 1px solid #534d95;
 }
 
-.plan-box-div > img {
+.plan-box-div>img {
   width: 2.5rem;
   height: 2.5rem;
 }
 
-.plan-box-div > .plan-box-detail > h4 {
+.plan-box-div>.plan-box-detail>h4 {
   color: #192942;
   margin-bottom: 0.3rem;
   font-size: medium;
 }
 
-.plan-box-div > .plan-box-detail > p {
+.plan-box-div>.plan-box-detail>p {
   color: #a4a4ae;
   font-size: small;
 }
@@ -321,11 +318,11 @@ body {
   width: 26px;
 }
 
-.plan-value-converter input:checked + .slider {
+.plan-value-converter input:checked+.slider {
   background-color: #042959;
 }
 
-.plan-value-converter input:checked + .slider:before {
+.plan-value-converter input:checked+.slider:before {
   transform: translateX(26px);
 }
 
@@ -354,32 +351,32 @@ body {
   margin-bottom: 1rem;
 }
 
-.service-container > div {
+.service-container>div {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-.service-container > p {
+.service-container>p {
   color: #5952ab;
 }
 
-.service-container > div > input {
+.service-container>div>input {
   accent-color: #4138d0;
 }
 
-.service-container > div > span > label {
+.service-container>div>span>label {
   font-weight: 500;
   cursor: pointer;
 }
 
-.service-container > div > span > p {
+.service-container>div>span>p {
   font-size: small;
   color: #a0a0a9;
   font-weight: bold;
 }
 
-.service-container > div > input {
+.service-container>div>input {
   width: 1.2rem;
   height: 1.2rem;
 }
@@ -403,53 +400,55 @@ body {
   padding: 1.5rem;
 }
 
-.finishing-up-payment-page-details > div {
+.finishing-up-payment-page-details>div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.finishing-up-payment-page-details > div:nth-child(1) {
+.finishing-up-payment-page-details>div:nth-child(1) {
   border-bottom: 1px solid #e7e8ed;
   padding-top: 0rem;
 }
 
-.finishing-up-payment-page-details > div {
+.finishing-up-payment-page-details>div {
   padding: 0.9rem 0rem;
 }
 
-.finishing-up-payment-page-details > div > div > h3 {
+.finishing-up-payment-page-details>div>div>h3 {
   color: #112746;
   font-size: medium;
   font-weight: 500;
   margin-bottom: 0.4rem;
 }
 
-.finishing-up-payment-page-details > div > div > p {
-  color: #4e48aa;
+.finishing-up-payment-page-details>div>div>p {
+  color: #9797a1;
   font-size: medium;
   font-weight: 500;
   margin-bottom: 0.4rem;
-}
-
-.finishing-up-payment-page-details > div > div > p:hover {
   text-decoration: 1.5px underline;
   text-decoration-line: underline;
   cursor: pointer;
 }
 
-.finishing-up-payment-page-details > div:nth-child(1) > p {
+.finishing-up-payment-page-details>div>div>p:hover {
+  color: #4e48aa;
+}
+
+.finishing-up-payment-page-details>div:nth-child(1)>p {
   color: #112746;
   font-size: medium;
   font-weight: bold;
 }
 
-.finishing-up-payment-page-details > div > h4 {
+.finishing-up-payment-page-details>div>h4 {
   color: #a0a0ac;
   font-size: small;
   font-weight: 100;
 }
-.finishing-up-payment-page-details > div > p {
+
+.finishing-up-payment-page-details>div>p {
   color: #263447;
   font-size: small;
   font-weight: 100;
@@ -462,20 +461,20 @@ body {
   padding: 1.5rem;
 }
 
-.finishing-up-payment-page-total-value > h5 {
+.finishing-up-payment-page-total-value>h5 {
   color: #97989c;
   font-weight: lighter;
   font-size: small;
 }
 
-.finishing-up-payment-page-total-value > p {
+.finishing-up-payment-page-total-value>p {
   color: #4c47d6;
   font-weight: bold;
 }
 
 /* ------------ Thanks-Css -------------- */
 
-.common-container > .thank-container {
+.common-container>.thank-container {
   height: 100%;
   width: 100%;
   display: flex;
@@ -485,11 +484,11 @@ body {
   gap: 0.8rem;
 }
 
-.common-container > .thank-container > h2 {
+.common-container>.thank-container>h2 {
   color: #00265c;
 }
 
-.common-container > .thank-container > p {
+.common-container>.thank-container>p {
   text-align: center;
   width: 80%;
   color: #9a9ba1;
@@ -505,15 +504,16 @@ body {
     /* justify-content: normal;  */
     display: block;
   }
+
   .main-div {
     flex-direction: column;
     padding: 0;
-    position: relative;
   }
 
   .side-component {
     width: 100%;
     height: 33%;
+    position: relative;
   }
 
   .side-component-container {
@@ -532,6 +532,7 @@ body {
   .routes-conatiner {
     width: 100%;
     background-color: #eef5ff;
+    /* position: relative; */
   }
 
   .common-container {
@@ -544,25 +545,54 @@ body {
     top: 100px;
     left: 0;
     right: 0;
-    height: 72%;
-    display: block;
+    height: auto;
+    display: inline-block;
   }
 
-  .common-container > .common-heading-div {
+  .common-container>.common-heading-div {
     margin: 0rem;
   }
 
-  .common-container > form {
-    height: 0;
-  }
-
   .navigation-button {
+    background-color: white;
+    width: 100%;
     position: fixed;
     bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 1rem
   }
 
-  .common-container > form > .personal-info-form-input {
+  .common-container>form>.personal-info-form-input {
     gap: 0.5rem;
     margin-bottom: 0.8rem;
   }
+
+  .select-plan-box-container>div>.plan-box-container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .plan-box-div {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .common-container>.thank-container {
+    padding: 4rem 0rem;
+  }
+
+  .common-container>.thank-container>p {
+    width: 100%;
+  }
+
+  .side-index-active{
+    background-color: #c2e6fd;
+    border: none;
+    color: #092c52 !important;
+  }
+
 }
