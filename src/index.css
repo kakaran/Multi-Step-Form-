@@ -159,6 +159,12 @@ body {
   padding-bottom: 0.4rem;
 }
 
+.side-index-active{
+  background-color: #c2e6fd;
+  border: none;
+  color: #092c52 !important;
+}
+
 /* ------------ Personal-Info-Css -------------- */
 
 .common-container>form {
@@ -497,7 +503,7 @@ body {
 
 /* ------------ media-query-Css -------------- */
 
-@media (max-width: 490px) {
+@media (max-width: 798px) {
   body {
     width: 100%;
     margin: 0;
@@ -589,10 +595,6 @@ body {
     width: 100%;
   }
 
-  .side-index-active{
-    background-color: #c2e6fd;
-    border: none;
-    color: #092c52 !important;
-  }
+
 
 }
